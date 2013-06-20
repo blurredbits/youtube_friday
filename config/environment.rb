@@ -24,6 +24,7 @@ require 'erb'
 require 'sinatra/flash'
 require 'bcrypt'
 require 'faker'
+require 'pusher'
 
 
 # Some helper constants for path-centric logic

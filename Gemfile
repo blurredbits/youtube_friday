@@ -20,6 +20,7 @@ gem 'bcrypt-ruby'
 gem 'sinatra-flash'
 
 gem 'shotgun'
+gem 'pusher'
 
 group :test do
   gem 'faker'
