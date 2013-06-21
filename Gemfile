@@ -21,6 +21,7 @@ gem 'sinatra-flash'
 
 gem 'shotgun'
 gem 'pusher'
+gem 'backports'
 
 group :test do
   gem 'faker'

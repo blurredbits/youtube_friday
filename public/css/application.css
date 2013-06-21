@@ -1,9 +1,63 @@
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+body {
+  content: "";
+  position:absolute;
+  z-index:-1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url('/images/youtube_friday_bg.png') no-repeat top left;
+  font-family: 'Fjalla One', sans-serif;
 }
-th {
-  text-align: left;
+
+#links {
+  background-color: #9BB4CD;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid gray;
+  border-radius: 5px;
+  opacity: 0.9;
 }
+nav {
+  background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(125,185,232,0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,0))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
+  margin-top: 0px;
+  width: 100%;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+form input {
+  width: 40%;
+  margin: 10px;
+}
+h2, h3 {
+  text-align: center;
+}
+
+nav p {
+  text-align: center;
+}
+
+#clip_boxes .clip {
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding: 20px;
+  margin: 20px;
+}
+
+

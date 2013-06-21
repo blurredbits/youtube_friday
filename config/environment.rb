@@ -25,6 +25,7 @@ require 'sinatra/flash'
 require 'bcrypt'
 require 'faker'
 require 'pusher'
+require 'backports'
 
 
 # Some helper constants for path-centric logic
@@ -35,6 +36,14 @@ APP_NAME = APP_ROOT.basename.to_s
 # Set up the controllers and helpers
 Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file }
 Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
+
+
+Pusher.app_id = '46018'
+Pusher.key = 'f206b222ae6d845db32e'
+Pusher.secret = 'd367c6a8c94bc7d39291'
+PUSHER_CHANNEL = 'clips'
+PUSHER_PRESENCE_CHANNEL = 'presence-clips'
+
 
 # Set up the database and models
 require APP_ROOT.join('config', 'database')

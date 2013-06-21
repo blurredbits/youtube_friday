@@ -1,4 +1,20 @@
 get '/' do
-  # Look in app/views/index.erb
   erb :index
+end
+
+post '/say' do
+  clip = params[:clip]
+  Pusher.trigger(PUSHER_CHANNEL, 'add_clip', {:clip => clip })
+end
+
+post '/pusher/auth' do
+  if true # replace w/current_user
+    response = Pusher[params[:channel_name]].authenticate(params[:socket_id], {
+      :user_id => rand, # => required
+      :user_info => {}
+    })
+    response.to_json
+  else
+    status 403
+  end
 end
