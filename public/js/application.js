@@ -6,9 +6,12 @@ var online = null;
     var channel = pusher.subscribe('clips');
 
     channel.bind('add_clip', function(data) {
-      //console.log(data.clip);
       $('#clip_boxes').prepend($('<p class="clip"><a href="'+data.clip+'" target="_blank">'+data.clip+'</a></p>'));
     });
+
+    channel.bind('add_chat', function(data) {
+      $('#chat_boxes').prepend($('<p class="chat">' + data.chat + '</p>'));
+    })
 
     $('#say').submit(function(){
       $.post('say', $(this).serialize(), function(data){
@@ -16,6 +19,8 @@ var online = null;
       });
       return false;
     });
+
+
     // presence channel
     presenceChannel = pusher.subscribe('presence-clips');
     presenceChannel.bind('pusher:subscription_succeeded', function(members) {

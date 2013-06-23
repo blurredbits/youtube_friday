@@ -18,3 +18,6 @@ post '/pusher/auth' do
     status 403
   end
 end
+
+# var linkTest = /https?:\/\//i;
+# var youtubeTest = /v=[a-z0-9]*/i;
